@@ -1,6 +1,6 @@
 import MainBanner from "@/containers/MainBanner";
 import StoryBanner from "@/containers/StoryBanner";
-import ReadmapBanner from "@/containers/ReadmapBanner";
+import RoadmapBanner from "@/containers/RoadmapBanner";
 import RarityBanner from "@/containers/RarityBanner";
 import Faqs from "@/containers/Faqs";
 import GetNft from "@/containers/GetNft";
@@ -11,7 +11,7 @@ const MainPage = () => {
     <React.Fragment>
       <MainBanner />
       <StoryBanner />
-      <ReadmapBanner />
+      <RoadmapBanner />
       <RarityBanner />
       <Faqs />
       <GetNft />

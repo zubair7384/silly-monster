@@ -5,6 +5,13 @@ import Image from "next/image";
 import { primary_color, content_width } from "../constants";
 
 const Header = () => {
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <StyledHeader>
       <div className="nav-wrapper">
@@ -20,18 +27,20 @@ const Header = () => {
           {[
             {
               name: "About",
-              id: 1,
+              id: "about-section",
             },
             {
               name: "Roadmap",
-              id: 2,
+              id: "roadmap-section",
             },
             {
               name: "Rarity",
-              id: 3,
+              id: "rarity-section",
             },
           ].map((item) => (
-            <a key={item.id}>{item.name}</a>
+            <a key={item.id} onClick={() => scrollToSection(item.id)}>
+              {item.name}
+            </a>
           ))}
         </div>
         <div className="nav-buttons">

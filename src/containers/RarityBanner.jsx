@@ -9,7 +9,7 @@ import Marquee from "react-fast-marquee";
 
 const RarityBanner = () => {
   return (
-    <StyledRarityBanner>
+    <StyledRarityBanner id="rarity-section">
       <div className="rarity-wrapper">
         <H2>Rarity</H2>
         <Text className="rarity-text">

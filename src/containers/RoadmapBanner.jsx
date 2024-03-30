@@ -5,9 +5,9 @@ import { content_width } from "@/constants";
 import CustomCard from "@/components/CustomCard";
 import styled from "styled-components";
 
-const ReadmapBanner = () => {
+const RoadmapBanner = () => {
   return (
-    <StyledRoadmapBanner>
+    <StyledRoadmapBanner id="roadmap-section">
       <div className="title-wrapper">
         <H2 type="dark">Roadmap</H2>
         <Text type="dark">
@@ -59,7 +59,7 @@ const ReadmapBanner = () => {
   );
 };
 
-export default ReadmapBanner;
+export default RoadmapBanner;
 
 const StyledRoadmapBanner = styled.div`
   .title-wrapper {

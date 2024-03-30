@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const StoryBanner = () => {
   return (
-    <StyledStoryBanner>
+    <StyledStoryBanner id="about-section">
       <div className="content-wrapper">
         <H2 type="dark">Silly Monster Story</H2>
         <Text type="dark">
