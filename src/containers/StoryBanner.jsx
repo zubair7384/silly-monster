@@ -28,7 +28,7 @@ const StoryBanner = () => {
       <div className="gif-wrapper">
         <Image
           className="story-img"
-          src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/SM_Logo_Animated_Square_Only%20Monsters.gif"
+          src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/SM_Logo_Animated_Transparent.gif"
           alt="silly-monster"
           width={736}
           height={736}
