@@ -23,7 +23,7 @@ const RoadmapBanner = () => {
               "The Silly Monster has been successfully launched on Opensea, get your NFT now and be an early memeber of the Silly Monster club.",
           },
           {
-            title: "Webdite",
+            title: "Website",
             details:
               "We are currently working on an amazing redesign for the website that is in-line with out vision for the Silly Monster project.",
           },

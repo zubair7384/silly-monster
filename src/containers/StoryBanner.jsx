@@ -28,7 +28,7 @@ const StoryBanner = () => {
       <div className="gif-wrapper">
         <Image
           className="story-img"
-          src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/SM_Logo_Animated_Transparent.gif"
+          src="/story.gif"
           alt="silly-monster"
           width={736}
           height={736}
@@ -45,11 +45,12 @@ const StyledStoryBanner = styled.div`
   justify-content: space-between;
   width: ${content_width};
   margin: 0 auto;
-  padding: 4rem 0 8rem 0;
+  padding: 8rem 0 8rem 0;
   .content-wrapper {
     width: 46%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: 3rem;
   }
   .story-btn {
