@@ -12,9 +12,7 @@ const CustomCard = (props) => {
         <H2 className="custom-title" type="dark">
           {props.title}
         </H2>
-        <br />
-        <br />
-        <br />
+
         <Text className="custom-text" type="dark">
           {props.details}
         </Text>
@@ -26,7 +24,7 @@ const CustomCard = (props) => {
 export default CustomCard;
 
 const StyledCustomCard = styled.div`
-  width: 542px;
+  width: 516px;
   height: 698px;
   display: flex;
   flex-direction: column;
@@ -45,6 +43,11 @@ const StyledCustomCard = styled.div`
     border-radius: 50%;
   }
   .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    height: 65%;
+    gap: 4rem;
     .custom-title {
       font-weight: 400;
       font-size: 72px;
