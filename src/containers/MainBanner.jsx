@@ -37,7 +37,7 @@ export default MainBanner;
 
 const StyledMainBanner = styled.div`
   width: 100%;
-  height: 120vh;
+  height: 1228px;
   background-color: #000;
   display: flex;
   align-items: end;

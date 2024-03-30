@@ -45,7 +45,7 @@ const StyledStoryBanner = styled.div`
   justify-content: space-between;
   width: ${content_width};
   margin: 0 auto;
-  padding: 8rem 0;
+  padding: 4rem 0 8rem 0;
   .content-wrapper {
     width: 46%;
     display: flex;
