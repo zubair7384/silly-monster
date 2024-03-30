@@ -15,8 +15,8 @@ const MainBanner = () => {
           className="banner-img"
           src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/tr:w-1920,h-1264/sm_banner.png"
           alt="silly-monster"
-          width={736}
-          height={736}
+          width={1920}
+          height={1264}
         />
         <StyledWrapper>
           <H1>Silly Monster</H1>
@@ -37,18 +37,20 @@ export default MainBanner;
 
 const StyledMainBanner = styled.div`
   width: 100%;
-  height: 100vh;
+  height: 120vh;
   background-color: #000;
   display: flex;
   align-items: end;
   justify-content: center;
-  margin-top: -14rem;
-  border-bottom-left-radius: 100px;
-  border-bottom-right-radius: 100px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
   .banner-img {
     width: 100%;
     position: absolute;
     height: auto;
+    top:0;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
     }
   }
 `;
@@ -59,8 +61,8 @@ const StyledWrapper = styled.div`
   flex-direction: column;
   gap: 2rem;
   width: 60%;
-  margin-bottom: 8rem;
   text-align: center;
+  margin-bottom: 5rem;
   .main-para {
     font-size: 40px;
     color: #fff;

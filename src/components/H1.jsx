@@ -2,7 +2,11 @@ import React from "react";
 import styled from "styled-components";
 
 const H1 = (props) => {
-  return <StyledH1 type={props.type}>{props.children}</StyledH1>;
+  return (
+    <StyledH1 {...props} type={props.type}>
+      {props.children}
+    </StyledH1>
+  );
 };
 
 export default H1;
