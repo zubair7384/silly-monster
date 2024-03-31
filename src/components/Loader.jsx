@@ -1,7 +1,6 @@
 // components/Loader.js
 import React from "react";
 import Image from "next/image";
-import styles from "@/styles/Home.module.css";
 
 const Loader = () => {
   const loaderStyle = {
@@ -14,13 +13,14 @@ const Loader = () => {
   };
   return (
     <div style={loaderStyle}>
-      <Image
+      {/* <Image
         className="social-icon"
         src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/SM_Logo_Animated_Transparent.gif"
         alt="monster-icon"
         width={100}
         height={100}
-      />
+      /> */}
+      <span className="loader"></span>
     </div>
   );
 };
