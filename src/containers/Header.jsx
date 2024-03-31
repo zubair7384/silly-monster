@@ -13,10 +13,11 @@ const Header = () => {
   };
 
   return (
-    <StyledHeader>
+    <StyledHeader id="home-section">
       <div className="nav-wrapper">
         <div className="logo-wrapper">
           <Image
+            className="social-icon"
             src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/SM_Logo_Animated_Transparent.gif"
             alt="monster-icon"
             width={137}
@@ -76,9 +77,11 @@ const StyledHeader = styled.div`
     justify-content: space-between;
     align-items: center;
     background: transparent;
-    .logo-wrapper {
+    .logo-wrapper { 
       color: #fff;
-    }
+    };
+  };
+  
     .nav-links {
       display: flex;
       gap: 3rem;
@@ -86,6 +89,9 @@ const StyledHeader = styled.div`
       a {
         cursor: pointer;
         font-size: 20px;
+        &:hover {
+          color: ${primary_color};
+        }
       }
     }
     .nav-buttons {

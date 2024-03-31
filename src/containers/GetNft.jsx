@@ -3,9 +3,10 @@ import H2 from "@/components/H2";
 import Text from "@/components/Text";
 import { content_width, primary_color, warning_color } from "@/constants";
 import React from "react";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import Marquee from "react-fast-marquee";
 import H1 from "@/components/H1";
+import Image from "next/image";
 
 const GetNft = () => {
   return (
@@ -21,6 +22,13 @@ const GetNft = () => {
         </Button>
       </div>
       <div className="marquee-container">
+        <StyledImage
+          className="story-img"
+          src="/footer-logo.svg"
+          alt="silly-monster"
+          width={287}
+          height={287}
+        />
         <Marquee>
           <H1 className="nft-text">NFT world of the Silly Monster.</H1>
         </Marquee>
@@ -56,11 +64,32 @@ const StyledNft = styled.div`
       align-items: center;
     }
   }
-  .nft-text {
-    font-size: 300px;
-    color: ${primary_color};
+  .marquee-container {
+    position: relative;
+    margin-top: 2rem;
+    .nft-text {
+      font-size: 300px;
+      color: ${primary_color};
+    }
+    .join-text {
+      margin-top: -5rem;
+    }
   }
-  .join-text {
-    margin-top: -5rem;
+`;
+
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
   }
+  to {
+    transform: rotate(360deg);
+  }
+`;
+
+const StyledImage = styled(Image)`
+  position: absolute;
+  left: 42%;
+  z-index: 2;
+  top: 32%;
+  animation: ${rotate360} 10s linear infinite; /* Adjust the duration (10s) and timing function as needed */
 `;

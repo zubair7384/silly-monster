@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Header from "./Header";
 import styled from "styled-components";
 import H1 from "@/components/H1";
@@ -15,8 +15,9 @@ const MainBanner = () => {
           className="banner-img"
           src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/tr:w-1920,h-1264/sm_banner.png"
           alt="silly-monster"
-          width={1920}
-          height={1264}
+          layout="fill"
+          objectFit="cover"
+          quality={100}
         />
         <StyledWrapper>
           <H1>Silly Monster</H1>
@@ -37,23 +38,20 @@ export default MainBanner;
 
 const StyledMainBanner = styled.div`
   width: 100%;
-  height: 1228px;
-  // background-color: #000;
+  height: 100vh;
   display: flex;
   align-items: end;
   justify-content: center;
-  border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
   .banner-img {
     width: 100%;
     position: absolute;
     height: auto;
-    top:0;
-    border-bottom-left-radius: 100px;
-    border-bottom-right-radius: 100px;
-    }
+    top: 0;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
   }
 `;
+
 const StyledWrapper = styled.div`
   position: relative;
   display: flex;

@@ -8,6 +8,13 @@ import { content_width } from "@/constants";
 import Marquee from "react-fast-marquee";
 
 const RarityBanner = () => {
+  const images = Array.from({ length: 150 }, (_, index) => {
+    const imageUrl = `https://ik.imagekit.io/q2ycoalvqm/Silly%20Monster/Silly%20Monster%20_${
+      index + 1
+    }.jpeg`;
+    return imageUrl;
+  });
+
   return (
     <StyledRarityBanner id="rarity-section">
       <div className="rarity-wrapper">
@@ -41,21 +48,12 @@ const RarityBanner = () => {
         ))}
       </div>
       <Marquee className="monster-marquee">
-        {[
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-        ].map((item, index) => (
-          <div className="image-wrapper">
+        {images.map((item, index) => (
+          <div className="image-wrapper" key={index}>
             <Image
               className="monster-img"
-              key={index + 1}
-              src={`${item}.png`}
-              alt="silly-monster"
+              src={item}
+              alt={`silly-monster-${index + 1}`}
               width={388}
               height={387}
             />
@@ -63,21 +61,12 @@ const RarityBanner = () => {
         ))}
       </Marquee>
       <Marquee className="monster-marquee" direction="right">
-        {[
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-        ].map((item, index) => (
-          <div className="image-wrapper">
+        {images.map((item, index) => (
+          <div className="image-wrapper" key={index}>
             <Image
               className="monster-img"
-              key={index + 1}
-              src={`${item}.png`}
-              alt="silly-monster"
+              src={item}
+              alt={`silly-monster-${index + 1}`}
               width={388}
               height={387}
             />
@@ -85,21 +74,12 @@ const RarityBanner = () => {
         ))}
       </Marquee>
       <Marquee className="monster-marquee">
-        {[
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-          "/monster-1",
-        ].map((item, index) => (
-          <div className="image-wrapper">
+        {images.map((item, index) => (
+          <div className="image-wrapper" key={index}>
             <Image
               className="monster-img"
-              key={index + 1}
-              src={`${item}.png`}
-              alt="silly-monster"
+              src={item}
+              alt={`silly-monster-${index + 1}`}
               width={388}
               height={387}
             />
@@ -143,5 +123,8 @@ const StyledRarityBanner = styled.div`
   }
   .image-wrapper {
     margin: 1rem;
+    .monster-img {
+      border-radius: 30px;
+    }
   }
 `;

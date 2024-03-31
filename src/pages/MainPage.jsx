@@ -4,6 +4,7 @@ import RoadmapBanner from "@/containers/RoadmapBanner";
 import RarityBanner from "@/containers/RarityBanner";
 import Faqs from "@/containers/Faqs";
 import GetNft from "@/containers/GetNft";
+import Footer from "@/containers/Footer";
 import React from "react";
 
 const MainPage = () => {
@@ -15,6 +16,7 @@ const MainPage = () => {
       <RarityBanner />
       <Faqs />
       <GetNft />
+      <Footer />
     </React.Fragment>
   );
 };
