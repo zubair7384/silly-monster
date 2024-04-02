@@ -18,11 +18,11 @@ export default function App({ Component, pageProps }) {
   return (
     <React.Fragment>
       <AnimatedCursor
-        innerSize={14}
-        outerSize={14}
-        outerAlpha={1}
-        innerScale={1}
-        outerScale={6}
+        innerSize={10}
+        outerSize={10}
+        outerAlpha={3}
+        innerScale={3}
+        outerScale={5}
         hasBlendMode={true}
         showSystemCursor={true}
         color="12, 239, 232"
