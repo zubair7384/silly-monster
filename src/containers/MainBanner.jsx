@@ -61,14 +61,34 @@ const StyledWrapper = styled.div`
   width: 60%;
   text-align: center;
   margin-bottom: 5rem;
+  @media screen and (max-width: 1000px) {
+    width: 75%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 100%;
+    padding: 0 10px;
+    gap: 1.5rem;
+  }
   .main-para {
     font-size: 40px;
     color: #fff;
+    @media screen and (max-width: 1000px) {
+      font-size: 30px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 26px;
+    }
   }
   .banner-btn {
     width: 30%;
     display: flex;
     justify-content: center;
     margin: 0 auto;
+    @media screen and (max-width: 1000px) {
+      width: 40%;
+    }
+    @media screen and (max-width: 600px) {
+      width: 60%;
+    }
   }
 `;

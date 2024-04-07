@@ -17,7 +17,7 @@ const Header = () => {
       <div className="nav-wrapper">
         <div className="logo-wrapper">
           <Image
-            className="social-icon"
+            className="logo-icon"
             src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/SM_Logo_Animated_Transparent.gif"
             alt="monster-icon"
             width={137}
@@ -56,6 +56,15 @@ const Header = () => {
           </Button>
           <Button color={primary_color}>View on OpenSea</Button>
         </div>
+        <div className="menu-wrapper">
+          <Image
+            className="menu-icon"
+            src="/menu-icon.svg"
+            alt="monster-icon"
+            width={50}
+            height={50}
+          />
+        </div>
       </div>
     </StyledHeader>
   );
@@ -68,6 +77,9 @@ const StyledHeader = styled.div`
   width: 100%;
   display: flex;
   justify-content: center;
+    @media screen and (max-width: 1600px) {
+      padding: 0 20px;
+  }
   .nav-wrapper {
     position: relative;
     z-index: 1;
@@ -79,6 +91,12 @@ const StyledHeader = styled.div`
     background: transparent;
     .logo-wrapper { 
       color: #fff;
+      img {
+    @media screen and (max-width: 1600px) {
+      width: 85px;
+      height: 85px;
+        }
+      }
     };
   };
   
@@ -93,10 +111,23 @@ const StyledHeader = styled.div`
           color: ${primary_color};
         }
       }
+      @media screen and (max-width: 1000px) {
+        display: none;
+        }
     }
     .nav-buttons {
       display: flex;
       gap: 1.5rem;
+      @media screen and (max-width: 1000px) {
+      display: none;
+      }
     }
+  }
+  .menu-wrapper {
+    display: none;
+    @media screen and (max-width: 1000px) {
+        display: flex;
+        z-index: 2;
+        padding: 0;
   }
 `;

@@ -41,6 +41,10 @@ const AccordionWrapper = styled.div`
   overflow: hidden;
   padding: 2rem;
   background-color: #e7e7e7;
+  @media screen and (max-width: 600px) {
+    border-radius: 20px;
+    padding: 1rem;
+  }
 `;
 
 const AccordionTitle = styled.div`

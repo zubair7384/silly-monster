@@ -63,18 +63,28 @@ export default RoadmapBanner;
 
 const StyledRoadmapBanner = styled.div`
   .title-wrapper {
-    width: 41%;
-    display: grid;
-    gap: 2rem;
+    width: 70%;
+    max-width: ${content_width};
     margin: 0 auto;
     text-align: center;
+    padding: 0 20px;
+    @media screen and (max-width: 850px) {
+      width: 90%;
+    }
   }
   .cards-wrapper {
     display: flex;
     flex-wrap: wrap;
-    width: ${content_width};
-    margin: 0 auto;
+    justify-content: space-around;
     gap: 1.6rem;
-    padding: 5rem 0;
+    padding: 2rem 0;
+    max-width: ${content_width};
+    margin: 0 auto;
+    @media screen and (max-width: 850px) {
+      gap: 2rem;
+    }
+    @media screen and (max-width: 600px) {
+      margin: 0 20px;
+    }
   }
 `;

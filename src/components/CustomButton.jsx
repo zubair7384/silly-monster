@@ -29,4 +29,7 @@ const StyledButton = styled.button`
   &:focus {
     outline: none;
   }
+  @media screen and (max-width: 1200px) {
+    font-size: 16px;
+  }
 `;

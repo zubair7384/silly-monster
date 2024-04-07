@@ -13,7 +13,7 @@ function RarityCard(props) {
         width={67}
         height={70}
       />
-      <Text>{props.title}</Text>
+      <Text className="rarity-card-text">{props.title}</Text>
     </StyledRarituyCard>
   );
 }
@@ -23,10 +23,76 @@ export default RarityCard;
 const StyledRarituyCard = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  width: 388px;
+  justify-content: start;
+  gap: 4rem;
+  width: 30%;
   height: 172px;
   background: #1f2123;
   border-radius: 100px;
+  @media screen and (max-width: 1600px) {
+    width: 25%;
+    gap: 2rem;
+    height: 142px;
+  }
+  @media screen and (max-width: 1200px) {
+    gap: 1rem;
+    height: 122px;
+  }
+  @media screen and (max-width: 1000px) {
+    gap: 1rem;
+    height: 90px;
+  }
+  @media screen and (max-width: 850px) {
+    gap: 8px;
+    width: 25%;
+    height: 60px;
+  }
+  @media screen and (max-width: 850px) {
+    gap: 4px;
+    width: 25%;
+    height: 60px;
+  }
+  @media screen and (max-width: 500px) {
+    gap: 6px;
+    width: 30%;
+    height: 50px;
+    margin: 0 !important;
+  }
+  padding-left: 3%;
+  .rarity-card-text {
+    font-size: 36px;
+    @media screen and (max-width: 1600px) {
+      font-size: 25px;
+    }
+    @media screen and (max-width: 1000px) {
+      font-size: 16px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 430px) {
+      font-size: 12px;
+    }
+  }
+
+  @media screen and (max-width: 1600px) {
+    margin: 0 20px;
+  }
+  @media screen and (max-width: 850px) {
+    font-size: 26px;
+  }
+  .card-img {
+    @media screen and (max-width: 1600px) {
+      width: 50px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 30px;
+    }
+    @media screen and (max-width: 850px) {
+      width: 20px;
+    }
+    @media screen and (max-width: 430px) {
+      width: 15px;
+    }
+  }
 `;

@@ -28,20 +28,16 @@ const RarityBanner = () => {
       <div className="cards-wrapper">
         {[
           {
-            title: "Stacks web wallet",
-            src: "/icon-1.svg",
+            title: "Common",
+            src: "/r-icon-1.svg",
           },
           {
-            title: "DeFi plateform alex",
-            src: "/icon-2.svg",
+            title: "Rare",
+            src: "/r-icon-2.svg",
           },
           {
-            title: "Xverse app Jolocam",
-            src: "/icon-3.svg",
-          },
-          {
-            title: "Xverse meta wallet",
-            src: "/icon-4.svg",
+            title: "Legendary",
+            src: "/r-icon-3.svg",
           },
         ].map((item, index) => (
           <RarityCard key={index} src={item.src} title={item.title} />
@@ -93,38 +89,98 @@ const RarityBanner = () => {
 export default RarityBanner;
 
 const StyledRarityBanner = styled.div`
-  background: #000;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 1) 71%,
+    rgba(255, 255, 255, 1) 100%
+  );
   border-radius: 50px;
-  padding-bottom: 8rem;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  margin-top: 5rem;
   .rarity-wrapper {
     width: ${content_width};
     display: flex;
     align-items: center;
     padding: 6rem 0;
     margin: 0 auto;
+    @media screen and (max-width: 850px) {
+      margin: 0 20px;
+      padding: 3rem 0;
+    }
     .rarity-text {
       width: 50%;
       padding-left: 8rem;
+      @media screen and (max-width: 1000px) {
+        width: 40%;
+        font-size: 16px;
+        padding-left: 3rem;
+      }
+      @media screen and (max-width: 850px) {
+        width: 40%;
+        font-size: 16px;
+        padding-left: 2rem;
+      }
+      @media screen and (max-width: 600px) {
+        width: 20%;
+        font-size: 14px;
+        padding-left: 1rem;
+      }
+      @media screen and (max-width: 430px) {
+        width: 15%;
+        font-size: 14px;
+        padding-left: 1rem;
+      }
     }
   }
   .cards-wrapper {
     display: flex;
-    flex-wrap: wrap;
     gap: 1rem;
     width: ${content_width};
     margin: 0 auto;
     margin-bottom: 6rem;
+    justify-content: space-between;
+    @media screen and (max-width: 1600px) {
+      width: 100%;
+      padding: 0 20px;
+      justify-content: center;
+    }
+    @media screen and (max-width: 850px) {
+      gap: 4px;
+      margin-bottom: 3rem;
+    }
+    @media screen and (max-width: 600px) {
+      gap: 10px;
+      margin-bottom: 2rem;
+    }
   }
   .monster-marquee {
-    // margin-bottom: 1rem;
     .rfm-initial-child-container {
       display: flex;
     }
   }
   .image-wrapper {
     margin: 1rem;
+    @media screen and (max-width: 850px) {
+      margin: 0.5rem;
+    }
+    @media screen and (max-width: 600px) {
+      margin: 0.3rem;
+    }
     .monster-img {
       border-radius: 30px;
+      @media screen and (max-width: 850px) {
+        width: 200px;
+        height: 199px;
+        border-radius: 20px;
+      }
+      @media screen and (max-width: 850px) {
+        width: 150px;
+        height: 149px;
+        border-radius: 20px;
+      }
     }
   }
 `;

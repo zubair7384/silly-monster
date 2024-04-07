@@ -33,7 +33,9 @@ const StoryBanner = () => {
   return (
     <StyledStoryBanner id="about-section">
       <div className="content-wrapper">
-        <H2 type="dark">Silly Monster Story</H2>
+        <H2 type="dark">
+          Silly Monster <br /> Story
+        </H2>
         <Text type="dark">
           Silly Monster is an NFT drop of adorable monster characters created by
           BullLabs. This unique NFT drop on Opensea celebrates the power of
@@ -49,9 +51,10 @@ const StoryBanner = () => {
         </Button>
       </div>
       <div className="gif-wrapper">
-        <p className="gif-text">Abstr Gradient NFT</p>
+        <p className="gif-text">
+          Mint and be a part of the <br /> exclusive club.
+        </p>
         <StyledImage
-          className="story-img"
           src="/footer-logo.svg"
           alt="silly-monster"
           width={287}
@@ -101,12 +104,35 @@ const StyledStoryBanner = styled.div`
   width: ${content_width};
   margin: 0 auto;
   padding: 8rem 0 8rem 0;
+  @media screen and (max-width: 1600px) {
+    width: 100%;
+    padding: 5rem 20px;
+  }
+  @media screen and (max-width: 850px) {
+    flex-direction: column;
+    gap: 4rem;
+  }
   .content-wrapper {
     width: 46%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 3rem;
+    @media screen and (max-width: 1600px) {
+      gap: 2rem;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 40%;
+      gap: 1rem;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 50%;
+      gap: 1rem;
+    }
+    @media screen and (max-width: 850px) {
+      width: 100%;
+      gap: 2rem;
+    }
   }
   .gif-wrapper {
     position: relative;
@@ -115,9 +141,35 @@ const StyledStoryBanner = styled.div`
     width: 30%;
     display: flex;
     justify-content: center;
+    @media screen and (max-width: 1600px) {
+      width: 40%;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 50%;
+    }
   }
   .story-img {
     border-radius: 50px;
+    @media screen and (max-width: 1600px) {
+      width: 600px;
+      height: 600px;
+    }
+    @media screen and (max-width: 1200px) {
+      width: 500px;
+      height: 500px;
+    }
+    @media screen and (max-width: 1000px) {
+      width: 450px;
+      height: 450px;
+    }
+    @media screen and (max-width: 900px) {
+      width: 400px;
+      height: 400px;
+    }
+    @media screen and (max-width: 850px) {
+      width: 100%;
+      height: auto;
+    }
   }
 
   .gif-text {
@@ -126,6 +178,9 @@ const StyledStoryBanner = styled.div`
     left: 6%;
     color: #fff;
     font-size: 28px;
+    @media screen and (max-width: 1000px) {
+      font-size: 20px;
+    }
   }
   .bid-wrapper {
     position: absolute;
@@ -139,6 +194,9 @@ const StyledStoryBanner = styled.div`
     align-items: center;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.5);
+    @media screen and (max-width: 1600px) {
+      display: none;
+    }
     .bid-left-wrapper {
       p {
         color: #fff;
@@ -157,15 +215,6 @@ const StyledStoryBanner = styled.div`
   }
 `;
 
-// const rotate360 = keyframes`
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// `;
-
 const StyledImage = styled(Image)`
   position: absolute;
   left: -20%;
@@ -173,4 +222,28 @@ const StyledImage = styled(Image)`
   top: 32%;
   transform: rotate(${(props) => props.rotation}deg);
   transition: transform 0.1s ease;
+  @media screen and (max-width: 1200px) {
+    width: 200px;
+    height: 200px;
+    left: -23%;
+    top: 30%;
+  }
+  @media screen and (max-width: 1000px) {
+    width: 200px;
+    height: 200px;
+    left: -23%;
+    top: 22%;
+  }
+  @media screen and (max-width: 850px) {
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: -30%;
+  }
+  @media screen and (max-width: 600px) {
+    width: 200px;
+    height: 200px;
+    left: 55%;
+    top: -35%;
+  }
 `;

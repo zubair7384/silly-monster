@@ -8,7 +8,9 @@ const Faqs = () => {
   return (
     <StyledFaqs>
       <div className="faqs-wrapper">
-        <H2 type="dark">FAQs</H2>
+        <H2 className="faq-title" type="dark">
+          FAQs
+        </H2>
         <br />
         <br />
         {[
@@ -60,9 +62,20 @@ export default Faqs;
 
 const StyledFaqs = styled.div`
   padding: 6rem 0;
+  @media screen and (max-width: 600px) {
+  padding: 3rem 0;
+  }
   .faqs-wrapper {
     width: ${content_width};
     margin: 0 auto;
+    @media screen and (max-width: 1600px) {
+      width: 100%;
+      padding: 0 20px;
+    }
+    .faq-title {
+    @media screen and (max-width: 600px) {
+      text-align: center;
+    }
   }
   .collapse-wrapper {
     margin-bottom: 1.5rem;

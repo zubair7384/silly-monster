@@ -47,6 +47,9 @@ const StyledNft = styled.div`
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
   padding: 6rem 0;
+  @media screen and (max-width: 600px) {
+    padding: 3rem 0;
+  }
   .nft-wrapper {
     width: ${content_width};
     margin: 0 auto;
@@ -56,12 +59,27 @@ const StyledNft = styled.div`
     justify-content: center;
     align-items: center;
     gap: 1.5rem;
+    @media screen and (max-width: 1600px) {
+      width: 100%;
+    }
+    @media screen and (max-width: 850px) {
+      width: 70%;
+    }
+    @media screen and (max-width: 630px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 500px) {
+      width: 90%;
+    }
     .nft-button {
       width: 16%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media screen and (max-width: 850px) {
+        width: 37%;
+      }
     }
   }
   .marquee-container {
@@ -70,9 +88,15 @@ const StyledNft = styled.div`
     .nft-text {
       font-size: 300px;
       color: ${primary_color};
+      @media screen and (max-width: 850px) {
+        font-size: 100px;
+      }
     }
     .join-text {
       margin-top: -5rem;
+      @media screen and (max-width: 850px) {
+        margin-top: -1rem;
+      }
     }
   }
 `;
@@ -92,4 +116,14 @@ const StyledImage = styled(Image)`
   z-index: 2;
   top: 32%;
   animation: ${rotate360} 10s linear infinite; /* Adjust the duration (10s) and timing function as needed */
+  @media screen and (max-width: 850px) {
+    width: 200px;
+    left: 38%;
+    top: -5%;
+  }
+  @media screen and (max-width: 850px) {
+    width: 160px;
+    left: 32%;
+    top: -6%;
+  }
 `;
