@@ -157,6 +157,9 @@ const StyledHeader = styled.div`
     justify-content: space-between;
     align-items: center;
     background: transparent;
+    @media screen and (max-width: 600px) {
+      height: 150px;
+        }
     .logo-wrapper { 
       color: #fff;
       img {

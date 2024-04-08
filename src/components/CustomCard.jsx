@@ -71,6 +71,13 @@ const StyledCustomCard = styled.div`
     height: 65%;
     gap: 4rem;
 
+    .custom-text {
+      line-height: 30px;
+      @media screen and (max-width: 600px) {
+        line-height: 22px !important;
+      }
+    }
+
     .custom-title {
       font-weight: 400;
       font-size: 72px;
@@ -86,9 +93,6 @@ const StyledCustomCard = styled.div`
         left: 5rem;
         font-size: 28px;
       }
-    }
-    .custom-text {
-      line-height: 30px;
     }
   }
 `;

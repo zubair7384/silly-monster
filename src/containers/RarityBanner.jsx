@@ -57,7 +57,7 @@ const RarityBanner = () => {
       <Marquee className="monster-marquee" loop={0} speed={40}>
         {imagesFirstList.map((item, index) => (
           <div className="image-wrapper" key={index}>
-            <Image
+            <img
               className="monster-img"
               src={`${item}?tr=q-30`}
               alt={`silly-monster-${index + 1}`}

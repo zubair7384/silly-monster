@@ -6,7 +6,7 @@ import H2 from "@/components/H2";
 
 const Faqs = () => {
   return (
-    <StyledFaqs>
+    <StyledFaqs id="faqs-section">
       <div className="faqs-wrapper">
         <H2 className="faq-title" type="dark">
           FAQs
@@ -75,6 +75,7 @@ const StyledFaqs = styled.div`
     .faq-title {
     @media screen and (max-width: 600px) {
       text-align: center;
+      width: 90%;
     }
   }
   .collapse-wrapper {
