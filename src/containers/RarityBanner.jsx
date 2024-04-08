@@ -54,7 +54,7 @@ const RarityBanner = () => {
           <RarityCard key={index} src={item.src} title={item.title} />
         ))}
       </div>
-      <Marquee className="monster-marquee" loop={0}>
+      <Marquee className="monster-marquee" loop={0} speed={40}>
         {imagesFirstList.map((item, index) => (
           <div className="image-wrapper" key={index}>
             <Image
@@ -67,7 +67,12 @@ const RarityBanner = () => {
           </div>
         ))}
       </Marquee>
-      <Marquee className="monster-marquee" direction="right" loop={0}>
+      <Marquee
+        className="monster-marquee"
+        direction="right"
+        loop={0}
+        speed={40}
+      >
         {imagesSecondList.map((item, index) => (
           <div className="image-wrapper" key={index}>
             <Image
@@ -82,7 +87,7 @@ const RarityBanner = () => {
       </Marquee>
       <Marquee className="monster-marquee">
         {imagesThirdList.map((item, index) => (
-          <div className="image-wrapper" key={index} loop={0}>
+          <div className="image-wrapper" key={index} loop={0} speed={40}>
             <Image
               className="monster-img"
               src={`${item}?tr=q-30`}

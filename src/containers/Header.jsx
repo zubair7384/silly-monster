@@ -5,6 +5,7 @@ import Image from "next/image";
 import { primary_color, content_width } from "../constants";
 
 const Header = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -56,7 +57,7 @@ const Header = () => {
           </Button>
           <Button color={primary_color}>View on OpenSea</Button>
         </div>
-        <div className="menu-wrapper">
+        <div className="menu-wrapper" onClick={() => setIsOpen(!isOpen)}>
           <Image
             className="menu-icon"
             src="/menu-icon.svg"
@@ -66,6 +67,73 @@ const Header = () => {
           />
         </div>
       </div>
+      {isOpen && (
+        <StyledMobileMenuWrapper>
+          <div className="mobile-navbar">
+            <div className="mob-nav-links">
+              {[
+                {
+                  name: "Home",
+                  id: "home-section",
+                },
+                {
+                  name: "About",
+                  id: "about-section",
+                },
+                {
+                  name: "Roadmap",
+                  id: "roadmap-section",
+                },
+                {
+                  name: "Rarity",
+                  id: "rarity-section",
+                },
+                {
+                  name: "Faqs",
+                  id: "faqs-section",
+                },
+              ].map((item) => (
+                <a
+                  key={item.id}
+                  onClick={() => {
+                    scrollToSection(item.id);
+                    if (item.name === "Home") {
+                      setIsOpen(!isOpen);
+                    }
+                  }}
+                >
+                  {item.name}
+                </a>
+              ))}
+              {isOpen && (
+                <Image
+                  className="close-icon"
+                  src="/close-icon.svg"
+                  alt="monster-icon"
+                  width={50}
+                  height={50}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                  }}
+                />
+              )}
+            </div>
+
+            <div className="mob-nav-buttons">
+              <Button type="dark">
+                <Image
+                  src="/discord.svg"
+                  alt="discord-icon"
+                  width={20}
+                  height={20}
+                />
+                DISCORD
+              </Button>
+              <Button color={primary_color}>View on OpenSea</Button>
+            </div>
+          </div>
+        </StyledMobileMenuWrapper>
+      )}
     </StyledHeader>
   );
 };
@@ -125,9 +193,58 @@ const StyledHeader = styled.div`
   }
   .menu-wrapper {
     display: none;
+    // .close-icon {
+    //   position: abosolute;
+
+    // }
     @media screen and (max-width: 1000px) {
         display: flex;
         z-index: 2;
         padding: 0;
+  }
+`;
+
+const StyledMobileMenuWrapper = styled.div`
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+  background: #000;
+
+  .mobile-navbar {
+    .mob-nav-links {
+      display: flex;
+      flex-direction: column;
+      align-items: self-start;
+      height: 100vh;
+      gap: 3rem;
+      font-size: 40px;
+      font-weight: bold;
+      color: #fff;
+      margin: 0 auto;
+      width: 36%;
+      margin-top: 32%;
+  
+      a {
+        border-bottom: 6px solid ${primary_color};
+      }
+      .close-icon{
+        position: absolute;
+        top: 3%;
+        right: 6%;
+      }
+    }
+  }
+  .mob-nav-buttons {
+    position: absolute;
+    bottom: 15%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+}
+
   }
 `;
