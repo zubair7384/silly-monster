@@ -7,14 +7,25 @@ import Image from "next/image";
 import { content_width } from "@/constants";
 import Marquee from "react-fast-marquee";
 
+const imagesFirstList = Array.from({ length: 50 }, (_, index) => {
+  const imageUrl = `https://ik.imagekit.io/q2ycoalvqm/Silly%20Monster/Silly%20Monster%20_${
+    index + 1
+  }.jpeg`;
+  return imageUrl;
+});
+const imagesSecondList = Array.from({ length: 50 }, (_, index) => {
+  const imageUrl = `https://ik.imagekit.io/q2ycoalvqm/Silly%20Monster/Silly%20Monster%20_${
+    index + 51
+  }.jpeg`;
+  return imageUrl;
+});
+const imagesThirdList = Array.from({ length: 50 }, (_, index) => {
+  const imageUrl = `https://ik.imagekit.io/q2ycoalvqm/Silly%20Monster/Silly%20Monster%20_${
+    index + 101
+  }.jpeg`;
+  return imageUrl;
+});
 const RarityBanner = () => {
-  const images = Array.from({ length: 150 }, (_, index) => {
-    const imageUrl = `https://ik.imagekit.io/q2ycoalvqm/Silly%20Monster/Silly%20Monster%20_${
-      index + 1
-    }.jpeg`;
-    return imageUrl;
-  });
-
   return (
     <StyledRarityBanner id="rarity-section">
       <div className="rarity-wrapper">
@@ -43,12 +54,12 @@ const RarityBanner = () => {
           <RarityCard key={index} src={item.src} title={item.title} />
         ))}
       </div>
-      <Marquee className="monster-marquee">
-        {images.map((item, index) => (
+      <Marquee className="monster-marquee" loop={0}>
+        {imagesFirstList.map((item, index) => (
           <div className="image-wrapper" key={index}>
             <Image
               className="monster-img"
-              src={item}
+              src={`${item}?tr=q-30`}
               alt={`silly-monster-${index + 1}`}
               width={388}
               height={387}
@@ -56,12 +67,12 @@ const RarityBanner = () => {
           </div>
         ))}
       </Marquee>
-      <Marquee className="monster-marquee" direction="right">
-        {images.map((item, index) => (
+      <Marquee className="monster-marquee" direction="right" loop={0}>
+        {imagesSecondList.map((item, index) => (
           <div className="image-wrapper" key={index}>
             <Image
               className="monster-img"
-              src={item}
+              src={`${item}?tr=q-30`}
               alt={`silly-monster-${index + 1}`}
               width={388}
               height={387}
@@ -70,11 +81,11 @@ const RarityBanner = () => {
         ))}
       </Marquee>
       <Marquee className="monster-marquee">
-        {images.map((item, index) => (
-          <div className="image-wrapper" key={index}>
+        {imagesThirdList.map((item, index) => (
+          <div className="image-wrapper" key={index} loop={0}>
             <Image
               className="monster-img"
-              src={item}
+              src={`${item}?tr=q-30`}
               alt={`silly-monster-${index + 1}`}
               width={388}
               height={387}

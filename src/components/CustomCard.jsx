@@ -88,7 +88,7 @@ const StyledCustomCard = styled.div`
       }
     }
     .custom-text {
-      line-height: 20px;
+      line-height: 30px;
     }
   }
 `;

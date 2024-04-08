@@ -7,17 +7,30 @@ import Button from "@/components/CustomButton";
 import { primary_color } from "@/constants";
 
 const MainBanner = () => {
+  const [imageLoaded, setImageLoaded] = useState(false);
   return (
     <React.Fragment>
       <Header />
       <StyledMainBanner>
+        <PlaceholderImage
+          src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/sm_banner.png?tr=q-30"
+          alt="silly-monster-placeholder"
+          onLoad={() => setImageLoaded(true)}
+          layout="fill"
+          objectFit="cover"
+        />
         <Image
           className="banner-img"
-          src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/tr:w-1920,h-1264/sm_banner.png"
+          src="https://ik.imagekit.io/3cnkjjvc1/sillymonster.io/sm_banner.png"
           alt="silly-monster"
           layout="fill"
           objectFit="cover"
           quality={100}
+          onLoad={() => setImageLoaded(true)}
+          style={{
+            opacity: imageLoaded ? 1 : 0,
+            transition: "opacity 0.5s ease-in-out",
+          }}
         />
         <StyledWrapper>
           <H1>Silly Monster</H1>
@@ -43,12 +56,13 @@ const StyledMainBanner = styled.div`
   align-items: end;
   justify-content: center;
   .banner-img {
+    position: relative;
     width: 100%;
-    position: absolute;
     height: auto;
-    top: 0;
+    max-height: 100vh;
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
+    overflow: hidden;
   }
 `;
 
@@ -91,4 +105,10 @@ const StyledWrapper = styled.div`
       width: 60%;
     }
   }
+`;
+const PlaceholderImage = styled.img`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 `;
