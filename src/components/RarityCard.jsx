@@ -10,8 +10,8 @@ function RarityCard(props) {
         className="card-img"
         src={props.src}
         alt="logo-1"
-        width={67}
-        height={70}
+        width={100}
+        height={67}
       />
       <Text className="rarity-card-text">{props.title}</Text>
     </StyledRarituyCard>
@@ -23,7 +23,7 @@ export default RarityCard;
 const StyledRarituyCard = styled.div`
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: center;
   gap: 4rem;
   width: 30%;
   height: 172px;
@@ -58,7 +58,6 @@ const StyledRarituyCard = styled.div`
     height: 50px;
     margin: 0 !important;
   }
-  padding-left: 3%;
   .rarity-card-text {
     font-size: 36px;
     @media screen and (max-width: 1600px) {
@@ -84,15 +83,19 @@ const StyledRarituyCard = styled.div`
   .card-img {
     @media screen and (max-width: 1600px) {
       width: 50px;
+      height: 50px;
     }
     @media screen and (max-width: 1200px) {
       width: 30px;
+      height: 30px;
     }
     @media screen and (max-width: 850px) {
       width: 20px;
+      height: 20px;
     }
     @media screen and (max-width: 430px) {
       width: 15px;
+      height: 15px;
     }
   }
 `;

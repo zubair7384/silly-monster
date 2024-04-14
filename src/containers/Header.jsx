@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styled from "styled-components";
 import Button from "../components/CustomButton";
 import Image from "next/image";
@@ -6,6 +6,7 @@ import { primary_color, content_width } from "../constants";
 
 const Header = () => {
   const [isOpen, setIsOpen] = React.useState(false);
+
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
     if (section) {
@@ -46,7 +47,7 @@ const Header = () => {
           ))}
         </div>
         <div className="nav-buttons">
-          <a href="https://discord.com/invite/KvhdY4cW" target="_blank">
+          <a href="https://discord.com/invite/RCT3NCCyrC" target="_blank">
             <Button type="dark">
               <Image
                 src="/discord.svg"
@@ -76,7 +77,38 @@ const Header = () => {
       </div>
       {isOpen && (
         <StyledMobileMenuWrapper>
+          {isOpen && (
+            <Image
+              className="close-icon"
+              src="/close-icon.svg"
+              alt="monster-icon"
+              width={30}
+              height={30}
+              onClick={() => {
+                setIsOpen(!isOpen);
+              }}
+            />
+          )}
           <div className="mobile-navbar">
+            <div className="mob-nav-buttons">
+              <a href="https://discord.com/invite/RCT3NCCyrC" target="_blank">
+                <Button type="dark">
+                  <Image
+                    src="/discord.svg"
+                    alt="discord-icon"
+                    width={20}
+                    height={20}
+                  />
+                  DISCORD
+                </Button>
+              </a>
+              <a
+                href="https://opensea.io/collection/silly-monster/overview"
+                target="_blank"
+              >
+                <Button color={primary_color}>View on OpenSea</Button>
+              </a>
+            </div>
             <div className="mob-nav-links">
               {[
                 {
@@ -112,38 +144,6 @@ const Header = () => {
                   {item.name}
                 </a>
               ))}
-              {isOpen && (
-                <Image
-                  className="close-icon"
-                  src="/close-icon.svg"
-                  alt="monster-icon"
-                  width={50}
-                  height={50}
-                  onClick={() => {
-                    setIsOpen(!isOpen);
-                  }}
-                />
-              )}
-            </div>
-
-            <div className="mob-nav-buttons">
-              <a href="https://discord.com/invite/KvhdY4cW" target="_blank">
-                <Button type="dark">
-                  <Image
-                    src="/discord.svg"
-                    alt="discord-icon"
-                    width={20}
-                    height={20}
-                  />
-                  DISCORD
-                </Button>
-              </a>
-              <a
-                href="https://opensea.io/collection/silly-monster/overview"
-                target="_blank"
-              >
-                <Button color={primary_color}>View on OpenSea</Button>
-              </a>
             </div>
           </div>
         </StyledMobileMenuWrapper>
@@ -177,6 +177,7 @@ const StyledHeader = styled.div`
     .logo-wrapper { 
       color: #fff;
       img {
+        background: transparent;
     @media screen and (max-width: 1600px) {
       width: 85px;
       height: 85px;
@@ -210,10 +211,6 @@ const StyledHeader = styled.div`
   }
   .menu-wrapper {
     display: none;
-    // .close-icon {
-    //   position: abosolute;
-
-    // }
     @media screen and (max-width: 1000px) {
         display: flex;
         z-index: 2;
@@ -234,7 +231,7 @@ const StyledMobileMenuWrapper = styled.div`
     .mob-nav-links {
       display: flex;
       flex-direction: column;
-      align-items: self-start;
+      align-items: center;
       height: 100vh;
       gap: 3rem;
       font-size: 40px;
@@ -242,26 +239,28 @@ const StyledMobileMenuWrapper = styled.div`
       color: #fff;
       margin: 0 auto;
       width: 36%;
-      margin-top: 32%;
+      position: relative;
+      top: 22vh;
   
       a {
         border-bottom: 6px solid ${primary_color};
       }
-      .close-icon{
-        position: absolute;
-        top: 3%;
-        right: 6%;
-      }
+      
     }
   }
   .mob-nav-buttons {
     position: absolute;
-    bottom: 15%;
+    top: 7%;
     display: flex;
     justify-content: center;
     width: 100%;
     gap: 1rem;
 }
 
+  }
+  .close-icon{
+    position: absolute;
+    right: 10%;
+    bottom: 7%;
   }
 `;

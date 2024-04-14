@@ -73,7 +73,7 @@ const StoryBanner = () => {
           width={736}
           height={736}
         />
-        <div className="bid-wrapper">
+        {/* <div className="bid-wrapper">
           <div className="bid-left-wrapper">
             <p>Current Bid</p>
             <br />
@@ -95,7 +95,7 @@ const StoryBanner = () => {
               <div className="rate-text">12h 43m 42s</div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </StyledStoryBanner>
   );

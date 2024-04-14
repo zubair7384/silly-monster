@@ -25,7 +25,7 @@ const RoadmapBanner = () => {
           {
             title: "Website",
             details:
-              "We are currently working on an amazing redesign for the website that is in-line with out vision for the Silly Monster project.",
+              "We are currently working on an amazing redesign for the website that is in-line with our vision for the Silly Monster project.",
           },
           {
             title: "Marketing",

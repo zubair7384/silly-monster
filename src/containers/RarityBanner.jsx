@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import H2 from "@/components/H2";
 import Text from "@/components/Text";
 import RarityCard from "@/components/RarityCard";
@@ -26,6 +26,24 @@ const imagesThirdList = Array.from({ length: 50 }, (_, index) => {
   return imageUrl;
 });
 const RarityBanner = () => {
+  const [showIconOnMob, setShowIconOnMob] = useState(false);
+
+  useEffect(() => {
+    setShowIconOnMob(window.innerWidth >= 1024);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setShowIconOnMob(window.innerWidth >= 1024);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <StyledRarityBanner id="rarity-section">
       <div className="rarity-wrapper">
@@ -40,15 +58,15 @@ const RarityBanner = () => {
         {[
           {
             title: "Common",
-            src: "/r-icon-1.svg",
+            src: showIconOnMob ? "/r-icon-1.svg" : "/r-icon-1.png",
           },
           {
             title: "Rare",
-            src: "/r-icon-2.svg",
+            src: showIconOnMob ? "/r-icon-2.svg" : "/r-icon-2.png",
           },
           {
             title: "Legendary",
-            src: "/r-icon-3.svg",
+            src: showIconOnMob ? "/r-icon-3.svg" : "/r-icon-3.png",
           },
         ].map((item, index) => (
           <RarityCard key={index} src={item.src} title={item.title} />
