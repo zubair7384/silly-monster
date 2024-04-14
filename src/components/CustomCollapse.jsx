@@ -58,6 +58,9 @@ const AccordionTitle = styled.div`
   }
   .title-text {
     font-weight: bold;
+    @media screen and (max-width: 850px) {
+      width: 85%;
+    }
   }
 `;
 

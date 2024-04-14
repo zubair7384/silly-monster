@@ -74,8 +74,8 @@ const StyledFaqs = styled.div`
     }
     .faq-title {
     @media screen and (max-width: 600px) {
-      text-align: center;
-      width: 90%;
+      text-align: start;
+      width: 60%;
     }
   }
   .collapse-wrapper {

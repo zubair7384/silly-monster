@@ -38,9 +38,14 @@ const MainBanner = () => {
             Rare NFT collection of 1010 piece distinctively adorable 3D rendered
             creatures.
           </p>
-          <Button className="banner-btn" color={primary_color}>
-            Mint on OpenSea
-          </Button>
+          <a
+            href="https://opensea.io/collection/silly-monster/overview"
+            target="_blank"
+          >
+            <Button className="banner-btn" color={primary_color}>
+              Mint on OpenSea
+            </Button>
+          </a>
         </StyledWrapper>
       </StyledMainBanner>
     </React.Fragment>

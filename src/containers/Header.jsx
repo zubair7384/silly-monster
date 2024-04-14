@@ -46,16 +46,23 @@ const Header = () => {
           ))}
         </div>
         <div className="nav-buttons">
-          <Button type="dark">
-            <Image
-              src="/discord.svg"
-              alt="discord-icon"
-              width={20}
-              height={20}
-            />
-            DISCORD
-          </Button>
-          <Button color={primary_color}>View on OpenSea</Button>
+          <a href="https://discord.com/invite/KvhdY4cW" target="_blank">
+            <Button type="dark">
+              <Image
+                src="/discord.svg"
+                alt="discord-icon"
+                width={20}
+                height={20}
+              />
+              DISCORD
+            </Button>
+          </a>
+          <a
+            href="https://opensea.io/collection/silly-monster/overview"
+            target="_blank"
+          >
+            <Button color={primary_color}>View on OpenSea</Button>
+          </a>
         </div>
         <div className="menu-wrapper" onClick={() => setIsOpen(!isOpen)}>
           <Image
@@ -120,16 +127,23 @@ const Header = () => {
             </div>
 
             <div className="mob-nav-buttons">
-              <Button type="dark">
-                <Image
-                  src="/discord.svg"
-                  alt="discord-icon"
-                  width={20}
-                  height={20}
-                />
-                DISCORD
-              </Button>
-              <Button color={primary_color}>View on OpenSea</Button>
+              <a href="https://discord.com/invite/KvhdY4cW" target="_blank">
+                <Button type="dark">
+                  <Image
+                    src="/discord.svg"
+                    alt="discord-icon"
+                    width={20}
+                    height={20}
+                  />
+                  DISCORD
+                </Button>
+              </a>
+              <a
+                href="https://opensea.io/collection/silly-monster/overview"
+                target="_blank"
+              >
+                <Button color={primary_color}>View on OpenSea</Button>
+              </a>
             </div>
           </div>
         </StyledMobileMenuWrapper>

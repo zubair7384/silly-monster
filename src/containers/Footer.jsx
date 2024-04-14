@@ -90,6 +90,13 @@ const Footer = () => {
         Cookie Settings, Anti-Spam, Privacy, User agreement, Legal Notice and
         Responsible Disclosure
       </p>
+      <div className="mobile-copy-text">
+        <p> © 2024 Silly Monster. All rights reserved</p>
+        <p>
+          Cookie Settings, Anti-Spam, Privacy, User agreement, Legal Notice and
+          Responsible Disclosure
+        </p>
+      </div>
     </StyledFooter>
   );
 };
@@ -151,17 +158,29 @@ const StyledFooter = styled.div`
     }
   }
   .footer-copy-text {
+    display: block;
     color: #fff;
     font-size: 20px;
     padding: 3rem;
-    @media screen and (max-width: 850px) {
-      font-size: 16px;
-      padding: 1rem;
+    @media screen and (max-width: 1400px) {
+      display: none;
+    }
+  }
+  .mobile-copy-text {
+    display: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 3rem;
+
+    @media screen and (max-width: 1400px) {
+      display: flex;
       text-align: center;
+      padding: 1.5rem 1rem;
+      flex-direction: column;
+      align-items: center;
     }
     @media screen and (max-width: 600px) {
-      font-size: 14px;
-      padding: 1rem;
+      font-size: 12px;
     }
   }
   .nav-link-small {

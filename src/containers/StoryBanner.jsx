@@ -46,16 +46,21 @@ const StoryBanner = () => {
           like-minded people who share a passion for creativity and fully
           embrace the possibilities of web3 technology.
         </Text>
-        <Button className="story-btn" color={primary_color}>
-          Get Yours Now
-        </Button>
+        <a
+          href="https://opensea.io/collection/silly-monster/overview"
+          target="_blank"
+        >
+          <Button className="story-btn" color={primary_color}>
+            Get Yours Now
+          </Button>
+        </a>
       </div>
       <div className="gif-wrapper">
         <p className="gif-text">
           Mint and be a part of the <br /> exclusive club.
         </p>
         <StyledImage
-          src="/footer-logo.svg"
+          src="/story-logo.svg"
           alt="silly-monster"
           width={287}
           height={287}
