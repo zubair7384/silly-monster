@@ -262,6 +262,6 @@ const StyledMobileMenuWrapper = styled.div`
   .close-icon{
     position: absolute;
     right: 10%;
-    bottom: 9%;
+    bottom: 10%;
   }
 `;
