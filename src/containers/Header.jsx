@@ -177,7 +177,7 @@ const StyledHeader = styled.div`
     .logo-wrapper { 
       color: #fff;
       img {
-        background: transparent;
+        background-color: transparent !important;
     @media screen and (max-width: 1600px) {
       width: 85px;
       height: 85px;
@@ -261,6 +261,6 @@ const StyledMobileMenuWrapper = styled.div`
   .close-icon{
     position: absolute;
     right: 10%;
-    bottom: 7%;
+    bottom: 9%;
   }
 `;
