@@ -50,24 +50,26 @@ const Footer = () => {
           {[
             {
               image: "/footer-1.svg",
-              src: "/",
+              src: "https://twitter.com/SillyMonsterNFT",
             },
             {
               image: "/footer-2.svg",
-              src: "/",
+              src: "https://discord.com/invite/KvhdY4cW",
             },
             {
               image: "/footer-3.svg",
-              src: "/",
+              src: "https://t.me/+Rh0IjHaB-K81NDc0",
             },
           ].map((item, index) => (
-            <StyledImage
-              key={index}
-              src={item.image}
-              alt="social-logo"
-              width={52}
-              height={52}
-            />
+            <a href={item.src} target="_blank">
+              <StyledImage
+                key={index}
+                src={item.image}
+                alt="social-logo"
+                width={52}
+                height={52}
+              />
+            </a>
           ))}
         </div>
         <div className="nav-links nav-link-big">
@@ -87,15 +89,11 @@ const Footer = () => {
       </div>
       <p className="footer-copy-text">
         © 2024 Silly Monster. All rights reserved &nbsp;&nbsp;|&nbsp;&nbsp;
-        Cookie Settings, Anti-Spam, Privacy, User agreement, Legal Notice and
-        Responsible Disclosure
+        Privacy Policy
       </p>
       <div className="mobile-copy-text">
         <p> © 2024 Silly Monster. All rights reserved</p>
-        <p>
-          Cookie Settings, Anti-Spam, Privacy, User agreement, Legal Notice and
-          Responsible Disclosure
-        </p>
+        <p>Privacy Policy</p>
       </div>
     </StyledFooter>
   );

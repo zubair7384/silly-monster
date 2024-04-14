@@ -178,6 +178,7 @@ const StyledHeader = styled.div`
       color: #fff;
       img {
         background-color: transparent !important;
+        border-radius: 50%;
     @media screen and (max-width: 1600px) {
       width: 85px;
       height: 85px;
