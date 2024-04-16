@@ -47,7 +47,7 @@ const StoryBanner = () => {
           embrace the possibilities of web3 technology.
         </Text>
         <a
-          href="https://opensea.io/collection/silly-monster/overview"
+          href="https://opensea.io/collection/the-silly-monster/overview"
           target="_blank"
         >
           <Button className="story-btn" color={primary_color}>

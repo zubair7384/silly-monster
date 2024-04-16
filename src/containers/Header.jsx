@@ -59,7 +59,7 @@ const Header = () => {
             </Button>
           </a>
           <a
-            href="https://opensea.io/collection/silly-monster/overview"
+            href="https://opensea.io/collection/the-silly-monster/overview"
             target="_blank"
           >
             <Button color={primary_color}>View on OpenSea</Button>
@@ -103,7 +103,7 @@ const Header = () => {
                 </Button>
               </a>
               <a
-                href="https://opensea.io/collection/silly-monster/overview"
+                href="https://opensea.io/collection/the-silly-monster/overview"
                 target="_blank"
               >
                 <Button color={primary_color}>View on OpenSea</Button>

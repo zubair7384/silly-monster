@@ -39,7 +39,7 @@ const MainBanner = () => {
             creatures.
           </p>
           <a
-            href="https://opensea.io/collection/silly-monster/overview"
+            href="https://opensea.io/collection/the-silly-monster/overview"
             target="_blank"
           >
             <Button className="banner-btn" color={primary_color}>

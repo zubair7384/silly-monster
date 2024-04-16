@@ -19,7 +19,7 @@ const GetNft = () => {
         </Text>
         <Button className="nft-button" color={warning_color}>
           <a
-            href="https://opensea.io/collection/silly-monster/overview"
+            href="https://opensea.io/collection/the-silly-monster/overview"
             target="_blank"
           >
             Get Silly Now
